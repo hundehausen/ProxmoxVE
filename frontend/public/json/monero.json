@@ -1,0 +1,51 @@
+{
+    "name": "Monero Node",
+    "slug": "monero",
+    "categories": [
+        23
+    ],
+    "date_created": "2025-02-22",
+    "type": "ct",
+    "updateable": true,
+    "privileged": false,
+    "interface_port": 18089,
+    "documentation": "https://docs.getmonero.org/interacting/monerod-reference/",
+    "website": "https://www.getmonero.org/",
+    "logo": "https://www.getmonero.org/press-kit/symbols/monero-symbol-on-white-480.png",
+    "description": "A privacy-focused cryptocurrency node that maintains a full copy of the Monero blockchain. Runs monerod to participate in the Monero P2P network.",
+    "install_methods": [
+        {
+            "type": "default",
+            "script": "ct/monero.sh",
+            "resources": {
+                "cpu": 4,
+                "ram": 4096,
+                "hdd": 200,
+                "os": "debian",
+                "version": "12"
+            }
+        }
+    ],
+    "default_credentials": {
+        "username": null,
+        "password": null
+    },
+    "notes": [
+        {
+            "text": "Initial blockchain sync may take several days. Monitor progress with 'monerod status'",
+            "type": "warning"
+        },
+        {
+            "text": "Choose between pruned node (~100GB) or full node (~250GB) during installation",
+            "type": "info"
+        },
+        {
+            "text": "Configuration file is located at /etc/monero/monerod.conf",
+            "type": "info"
+        },
+        {
+            "text": "P2P port 18080 and RPC port 18089 need to be accessible for full node functionality",
+            "type": "info"
+        }
+    ]
+}
